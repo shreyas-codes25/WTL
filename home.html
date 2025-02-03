@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:   #000000;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar h1 {
+            margin: 0;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #004d4d;
+        }
+
+        .slider {
+            width: 500%;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            animation: slide 9s infinite;
+        }
+
+        .slides img {
+            width: 100%;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0%); }
+        }
+
+        .product-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+        }
+
+        .product p {
+            font-weight: bold;
+            color: green;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            margin: 0 auto;
+        }
+
+        .logo1 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpO90YTnjj1_1IB_qw-0E48wkIEdQZbM5Aaw&s'); }
+        .logo2 { background-image: url('https://img.lovepik.com/element/40177/3459.png_1200.png'); }
+        .logo3 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6q94teqMmYn9klwrBNKuO4q_IFPx5IPgNXA&s'); }
+        .logo4 { background-image: url('E:/github project/WTL/samsung.png'); }
+
+        .footer {
+            background-color: #00cccc;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1>Team 8Bot</h1>
+        <div class="nav-links">
+            <a href="#">About us</a>
+            <a href="#">Contact us</a>
+            <a href="#">Home</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Become a Seller</a>
+        </div>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img src="https://t3.ftcdn.net/jpg/04/65/46/52/360_F_465465254_1pN9MGrA831idD6zIBL7q8rnZZpUCQTy.jpg" alt="Slide 1">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/871/820/non_2x/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-vector.jpg" alt="Slide 2">
+            <img src="https://img.freepik.com/premium-psd/black-friday-sale-social-media-post-instagram-post-web-banner-facebook-cover-template_220443-1071.jpg" alt="Slide 3">
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="product-section">
+        <div class="product">
+            <div class="logo logo2"></div>
+            <h3>Product 1</h3>
+            <p>$20.00</p>
+        </div>
+        <div class="product">
+            <div class="logo logo1"></div>
+            <h3>Product 2</h3>
+            <p>$30.00</p>
+        </div>
+        <div class="product">
+            <div class="logo logo3"></div>
+            <h3>Product 3</h3>
+            <p>$25.00</p>
+        </div>
+        <div class="product">
+            <div class="logo logo4"></div>
+            <h3>Product 4</h3>
+            <p>$40.00</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2025 Team 8Bot. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+</html>
