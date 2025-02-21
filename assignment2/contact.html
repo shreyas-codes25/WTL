@@ -33,9 +33,52 @@
         <h3>Business Hours</h3>
         <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
         <p>Saturday - Sunday: Closed</p>
+        
+        <h3>Contact Form</h3>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+            <span id="phoneError" class="error"></span>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <span id="messageError" class="error"></span>
+            
+            <button type="submit">Submit</button>
+        </form>
     </div>
     <div class="footer">
         <p>&copy; 2025 Team 8Bot. All Rights Reserved.</p>
     </div>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            let phone = document.getElementById('phone').value;
+            let message = document.getElementById('message').value;
+            let phoneRegex = /^\+?[0-9]{10,15}$/; // Validates international and local formats
+            let isValid = true;
+
+            if (!phoneRegex.test(phone)) {
+                document.getElementById('phoneError').textContent = "Invalid phone number!";
+                isValid = false; 
+            } else {
+                document.getElementById('phoneError').textContent = "";
+            }
+
+            if (message.length < 10) {
+                document.getElementById('messageError').textContent = "Message should be at least 10 characters long!";
+                isValid = false;
+            } else {
+                document.getElementById('messageError').textContent = "";
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
