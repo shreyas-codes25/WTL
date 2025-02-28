@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateForm() {
+            var pat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
+            if (document.f1.t1.value == "") {
+                alert("Please enter name");
+                document.f1.t1.focus();
+            }
+            else if (!pat.test(document.f1.t2.value)) {
+                alert("enter email");
+                document.f1.t2.value = "";
+                document.f1.t2.focus();
+            }
+
+            else if (!pass.test(document.f1.t3.value)) {
+                alert("enter valid password");
+                document.f1.t3.value = "";
+                document.f1.t3.focus();
+            }
+            else {
+                alert("Hello user");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1> welcome </h1>
+    <form name="f1">
+        Enter name : <input type="text" name="t1" value=""><br>
+        Enter Email : <input type="email" name="t2" value=""><br>
+        Enter password : <input type="password" name="t3" value=""><br>
+
+        <input type="button" name="b1" value="submit" onclick="validateForm()">
+    </form>
+
+</body>
+
+</html>
