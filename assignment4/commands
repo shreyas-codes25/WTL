@@ -1,0 +1,15 @@
+for installing 
+npm install -g @angular/cli
+
+for creating application 
+
+ng create my-app 
+
+
+for staring ng serve --open
+
+
+
+creating component
+
+ng g c login
