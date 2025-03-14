@@ -6,6 +6,9 @@ for creating application
 ng create my-app 
 
 
+cd my-app
+
+
 for staring ng serve --open
 
 
